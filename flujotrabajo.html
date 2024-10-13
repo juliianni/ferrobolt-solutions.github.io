@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flujo de trabajo - FerroBolt Solutions</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><span class="empresa-nombre">FerroBolt Solutions</span></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de flujo de trabajo -->
+    <section id="flujo-trabajo">
+        <h2>Flujo de trabajo de la empresa</h2>
+        <p>A continuación se muestra el flujo de trabajo dentro de nuestra empresa. Haz clic en cada fase para más detalles.</p>
+
+        <!-- Diagrama interactivo -->
+        <div class="diagrama">
+            <div class="proceso" onclick="mostrarDetalle('ventas')">Ventas</div>
+            <span class="flecha">→</span>
+            <div class="proceso" onclick="mostrarDetalle('compras')">Compras</div>
+            <span class="flecha">→</span>
+            <div class="proceso" onclick="mostrarDetalle('logistica')">Logística/Fabricación</div>
+            <span class="flecha">→</span>
+            <div class="proceso" onclick="mostrarDetalle('calidad')">Control de Calidad</div>
+            <span class="flecha">→</span>
+            <div class="proceso" onclick="mostrarDetalle('finanzas')">Finanzas</div>
+        </div>
+
+        <!-- Detalles de cada proceso -->
+        <div id="detalle" class="detalle-proceso"></div>
+    </section>
+
+    <script>
+        // Función para mostrar el detalle de cada fase del proceso
+        function mostrarDetalle(proceso) {
+            const detalle = document.getElementById('detalle');
+            if (proceso === 'ventas') {
+                detalle.innerHTML = '<h3>Ventas</h3><p>Las ventas reciben la orden de un cliente y se inicia el proceso.</p>';
+            } else if (proceso === 'compras') {
+                detalle.innerHTML = '<h3>Compras</h3><p>Compras verifica el stock y, si es necesario, realiza una orden de compra a proveedores.</p>';
+            } else if (proceso === 'logistica') {
+                detalle.innerHTML = '<h3>Logística/Fabricación</h3><p>Logística coordina la entrega de productos y Fabricación comienza la manufactura si hay stock disponible.</p>';
+            } else if (proceso === 'calidad') {
+                detalle.innerHTML = '<h3>Control de Calidad</h3><p>Controla que los productos cumplan con los estándares de calidad antes de ser enviados.</p>';
+            } else if (proceso === 'finanzas') {
+                detalle.innerHTML = '<h3>Finanzas</h3><p>Gestiona la facturación y cobros después de que el producto ha sido aprobado y enviado.</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos Clave</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><span class="empresa-nombre">FerroBolt Solutions</span></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de documentos clave centrada -->
+    <section id="documentos-clave">
+        <h2>Documentos clave de la empresa</h2>
+        <p>En esta sección se generan los documentos clave de la empresa, como órdenes de compra, facturas, órdenes de fabricación y eCheqs. Haz clic en cualquiera de los botones para ver los ejemplos.</p>
+
+        <!-- Botones para abrir los modales -->
+        <div class="documentos-botones">
+            <button onclick="mostrarImagen('modalOrdenCompra')">Orden de Compra</button>
+            <button onclick="mostrarImagen('modalFactura')">Factura</button>
+            <button onclick="mostrarImagen('modalOrdenFabricacion')">Orden de Fabricación</button>
+            <button onclick="mostrarImagen('modalEcheq')">Echeq</button>
+            <button onclick="mostrarImagen('modalRemito')">Remito</button>
+        </div>
+    </section>
+
+    <!-- Modales para mostrar las imágenes -->
+    <div id="modalOrdenCompra" class="modal">
+        <span class="close" onclick="cerrarModal('modalOrdenCompra')">&times;</span>
+        <img class="modal-content" src="imagenes/OrdCompra.jpg" alt="Orden de Compra">
+    </div>
+
+    <div id="modalFactura" class="modal">
+        <span class="close" onclick="cerrarModal('modalFactura')">&times;</span>
+        <img class="modal-content" src="imagenes/FacturaImg.jpg" alt="Factura">
+    </div>
+
+    <div id="modalOrdenFabricacion" class="modal">
+        <span class="close" onclick="cerrarModal('modalOrdenFabricacion')">&times;</span>
+        <img class="modal-content" src="imagenes/OrdFabric.jpg" alt="Orden de Fabricación">
+    </div>
+
+    <div id="modalRemito" class="modal">
+        <span class="close" onclick="cerrarModal('modalRemito')">&times;</span>
+        <img class="modal-content" src="imagenes/RemImg.jpg" alt="Remito">
+    </div>
+
+    <div id="modalEcheq" class="modal">
+        <span class="close" onclick="cerrarModal('modalEcheq')">&times;</span>
+        <img class="modal-content" src="imagenes/EcheqImg.jpg" alt="Echeq">
+    </div>
+
+    <script>
+        // Mostrar el modal
+        function mostrarImagen(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Cerrar el modal
+        function cerrarModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>División de Roles - FerroBolt Solutions</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><span class="empresa-nombre">FerroBolt Solutions</span></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de organigrama -->
+    <section id="organigrama">
+        <h2>División de Roles de la empresa</h2>
+        <p>A continuación, se muestra el organigrama de la empresa. Haz clic en cada área para más detalles.</p>
+
+        <!-- Imagen del organigrama con el mapa -->
+        <img src="imagenes/OrgImg.png" usemap="#orgMap" alt="Organigrama de la Empresa" class="organigrama-img">
+
+        <!-- Mapa de la imagen para definir las áreas clicables -->
+        <map name="orgMap">
+            <area shape="rect" coords="649,10,854,48" alt="Directorio" onclick="mostrarDetalle('directorio')">
+            <area shape="rect" coords="385,80,590,118" alt="Gerente Comercial" onclick="mostrarDetalle('gerenteComercial')">
+            <area shape="rect" coords="940,81,1145,119" alt="Gerente Financiero" onclick="mostrarDetalle('gerenteFinanciero')">
+            <area shape="rect" coords="647,84,852,122" alt="Compras" onclick="mostrarDetalle('compras')">
+            <area shape="rect" coords="380,147,585,185" alt="Ventas Empresas" onclick="mostrarDetalle('ventasEmpresas')">
+            <area shape="rect" coords="938,147,1143,185" alt="Jefe Administración" onclick="mostrarDetalle('jefeAdministracion')">
+            <area shape="rect" coords="380,205,585,243" alt="Admin de ventas" onclick="mostrarDetalle('adminVentas')">
+            <area shape="rect" coords="938,200,1143,238" alt="Pago Proveedores" onclick="mostrarDetalle('pagoProveedores')">
+            <area shape="rect" coords="939,254,1144,292" alt="Caja" onclick="mostrarDetalle('caja')">
+            <area shape="rect" coords="940,309,1145,347" alt="Cobranza" onclick="mostrarDetalle('cobranza')">
+            <area shape="rect" coords="940,363,1145,401" alt="Admin Contable" onclick="mostrarDetalle('adminContable')">
+            <area shape="rect" coords="941,418,1146,456" alt="Facturación" onclick="mostrarDetalle('facturacion')">
+            <area shape="rect" coords="67,149,272,187" alt="Jefe de Logística" onclick="mostrarDetalle('jefeLogistica')">
+            <area shape="rect" coords="63,208,268,246" alt="Expedición" onclick="mostrarDetalle('expedicion')">
+            <area shape="rect" coords="63,264,268,302" alt="Choferes" onclick="mostrarDetalle('choferes')">
+            <area shape="rect" coords="1239,142,1444,180" alt="RRHH" onclick="mostrarDetalle('rrhh')">
+            <area shape="rect" coords="1239,224,1444,262" alt="Maestranza" onclick="mostrarDetalle('maestranza')">
+            <area shape="rect" coords="379,264,584,302" alt="Act. de Costos" onclick="mostrarDetalle('actCostos')">
+            <area shape="rect" coords="374,312,579,350" alt="Jefe de Mostrador" onclick="mostrarDetalle('jefeMostrador')">
+            <area shape="rect" coords="374,366,579,404" alt="Ventas Mostrador" onclick="mostrarDetalle('ventasMostrador')">
+            <area shape="rect" coords="374,423,579,461" alt="Deposito" onclick="mostrarDetalle('deposito')">
+            <area shape="rect" coords="647,210,852,248" alt="Recep. de Proveedores" onclick="mostrarDetalle('recepProveedores')">
+        </map>
+
+        <!-- Detalles del rol seleccionado -->
+        <div id="detalle" class="detalle-rol"></div>
+    </section>
+
+    <script>
+        // Función para mostrar el detalle de cada rol
+        function mostrarDetalle(rol) {
+            const detalle = document.getElementById('detalle');
+            if (rol === 'directorio') {
+                detalle.innerHTML = '<h3>Directorio</h3><p>El directorio lidera la organización y toma decisiones clave.</p>';
+            } else if (rol === 'gerenteComercial') {
+                detalle.innerHTML = '<h3>Gerente Comercial</h3><p>El Gerente Comercial se encarga de supervisar las operaciones comerciales.</p>';
+            } else if (rol === 'compras') {
+                detalle.innerHTML = '<h3>Compras</h3><p>El departamento de Compras gestiona las adquisiciones de productos y servicios.</p>';
+            } else if (rol === 'gerenteFinanciero') {
+                detalle.innerHTML = '<h3>Gerente Financiero</h3><p>El Gerente Financiero supervisa las operaciones contables y financieras.</p>';
+            } else if (rol === 'ventasEmpresas') {
+                detalle.innerHTML = '<h3>Ventas Empresas</h3><p>Gestiona las ventas a empresas y clientes grandes.</p>';
+            } else if (rol === 'jefeLogistica') {
+                detalle.innerHTML = '<h3>Jefe de Logística</h3><p>Organiza y supervisa la distribución y transporte de productos.</p>';
+            } else if (rol === 'adminVentas') {
+                detalle.innerHTML = '<h3>Admin. de Ventas</h3><p>Apoya las actividades administrativas relacionadas con ventas.</p>';
+            } else if (rol === 'pagoProveedores') {
+                detalle.innerHTML = '<h3>Pago a Proveedores</h3><p>Gestiona los pagos a proveedores.</p>';
+            } else if (rol === 'maestranza') {
+                detalle.innerHTML = '<h3>Maestranza</h3><p>Encargado del mantenimiento y limpieza de las instalaciones.</p>';
+            } else if (rol === 'cobranza') {
+                detalle.innerHTML = '<h3>Cobranza</h3><p>Administra el cobro de deudas y pagos pendientes de los clientes.</p>';
+            } else if (rol === 'expedicion') {
+                detalle.innerHTML = '<h3>Expedición</h3><p>Supervisa la salida de los productos para distribución.</p>';
+            } else if (rol === 'choferes') {
+                detalle.innerHTML = '<h3>Choferes</h3><p>Encargados del transporte y distribución de productos.</p>';
+            } else if (rol === 'actCostos') {
+                detalle.innerHTML = '<h3>Act. de Costos</h3><p>Administra y optimiza los costos operativos de la empresa.</p>';
+            } else if (rol === 'jefeMostrador') {
+                detalle.innerHTML = '<h3>Jefe de Mostrador</h3><p>Supervisa las ventas y el servicio al cliente en el mostrador.</p>';
+            } else if (rol === 'ventasMostrador') {
+                detalle.innerHTML = '<h3>Ventas Mostrador</h3><p>Atiende y gestiona las ventas directas a los clientes en el mostrador.</p>';
+            } else if (rol === 'deposito') {
+                detalle.innerHTML = '<h3>Deposito</h3><p>Gestiona el almacenamiento y organización de productos en el depósito.</p>';
+            } else if (rol === 'recepProveedores') {
+                detalle.innerHTML = '<h3>Recep. de Proveedores</h3><p>Se encarga de recibir, verificar y procesar los productos que llegan a la empresa.</p>';
+            } else if (rol === 'jefeAdministracion') {
+                detalle.innerHTML = '<h3>Jefe de Administración</h3><p>Supervisa las operaciones administrativas y la gestión de recursos de la empresa.</p>';
+            } else if (rol === 'caja') {
+                detalle.innerHTML = '<h3>Caja</h3><p>Gestiona los flujos de efectivo y las operaciones diarias de cobro.</p>';
+            } else if (rol === 'facturacion') {
+                detalle.innerHTML = '<h3>Facturación</h3><p>Genera y gestiona las facturas para asegurar el correcto cobro de los servicios y productos.</p>';
+            } else if (rol === 'rrhh') {
+                detalle.innerHTML = '<h3>RRHH</h3><p>Recursos Humanos se encarga de gestionar el bienestar de los empleados, contrataciones y relaciones laborales.</p>';
+            } else if (rol === 'adminContable') {
+                detalle.innerHTML = '<h3>Admin. Contable</h3><p>Gestiona y controla las cuentas contables de la empresa para asegurar un manejo financiero óptimo.</p>';
+            }
+        }
+    </script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

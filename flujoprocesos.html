@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flujo de procesos - FerroBolt Solutions</title>
+    <link rel="stylesheet" href="css.css">
+    <!-- Font Awesome para íconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><span class="empresa-nombre">FerroBolt Solutions</span></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de diagrama de flujo de procesos -->
+    <section id="flujo-procesos">
+        <h2>Flujo de procesos de la empresa</h2>
+        <p>A continuación, se muestra el flujo de procesos clave dentro de nuestra empresa. Haz clic en cada fase para más detalles.</p>
+
+        <!-- Diagrama interactivo con íconos -->
+        <div class="diagrama">
+            <div class="proceso" title="Genera la demanda y estrategias de marketing" onclick="mostrarDetalle('marketing')">
+                <i class="fas fa-bullhorn"></i> Marketing
+            </div>
+            <div class="flecha">➔</div>
+            <div class="proceso" title="Verifica el inventario disponible" onclick="mostrarDetalle('stock')">
+                <i class="fas fa-boxes"></i> Stock/Inventario
+            </div>
+            <div class="flecha">➔</div>
+            <div class="proceso" title="Fabricación de los productos" onclick="mostrarDetalle('fabricacion')">
+                <i class="fas fa-industry"></i> Fabricación
+            </div>
+            <div class="flecha">➔</div>
+            <div class="proceso" title="Controla la calidad del producto" onclick="mostrarDetalle('controlcalidad')">
+                <i class="fas fa-clipboard-check"></i> Control de calidad
+            </div>
+        </div>
+        
+        <!-- Detalles de cada proceso -->
+        <div id="detalle" class="detalle-proceso"></div>
+    </section>
+
+    <script>
+        // Función para mostrar el detalle de cada fase del proceso
+        function mostrarDetalle(proceso) {
+            const detalle = document.getElementById('detalle');
+            if (proceso === 'marketing') {
+                detalle.innerHTML = '<h3>Marketing</h3><p>Genera la demanda y crea estrategias de captación de clientes.</p>';
+            } else if (proceso === 'stock') {
+                detalle.innerHTML = '<h3>Stock/Inventario</h3><p>Verifica el inventario disponible para la producción.</p>';
+            } else if (proceso === 'fabricacion') {
+                detalle.innerHTML = '<h3>Fabricación</h3><p>Se lleva a cabo el proceso de manufactura de los productos.</p>';
+            } else if (proceso === 'controlcalidad') {
+                detalle.innerHTML = '<h3>Control de calidad</h3><p>Asegura que los productos cumplan con los estándares requeridos.</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>
+

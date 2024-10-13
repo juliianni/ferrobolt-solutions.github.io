@@ -1,0 +1,1104 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Menú de navegación */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul li a, .empresa-nombre {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.empresa-nombre {
+    font-size: 18px;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Mantener el contenido alineado arriba */
+    padding: 20px;
+    margin: 0; /* Eliminar márgenes extras */
+    flex-grow: 1;
+}
+
+.imagen {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Línea divisoria vertical */
+.linea-vertical {
+    width: 2px;
+    background-color: #333;
+    height: 400px;
+    margin: 0 30px;
+}
+
+/* Contenido de la derecha */
+.contenido-derecha {
+    width: 40%;
+    padding-left: 20px;
+    text-align: center;
+    margin-top: 0; /* Eliminar márgenes que lo empujaban hacia abajo */
+}
+
+.contenido-derecha h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contenido-derecha h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Botones */
+.botones {
+    margin-top: 10px;
+}
+
+.botones button {
+    display: block;
+    width: 220px;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botones button:hover {
+    background-color: #555;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto asegura que todo el contenido dentro del footer esté centrado */
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer ul.social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Cambia justify-content */
+    width: 300px; /* Ajusta el ancho según sea necesario para que los íconos se distribuyan mejor */
+}
+
+footer ul.social-icons li {
+    display: inline-block;
+}
+
+footer ul.social-icons li a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+footer ul.social-icons li a:hover img {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+
+
+
+/* Estilos de la sección de "Nosotros" */
+.seccion-nosotros {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Aseguramos que el contenido esté correctamente alineado */
+.historia-contenido {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen según el espacio disponible */
+}
+
+/* Texto alineado a la izquierda */
+.texto-historia {
+    width: 55%; /* Ajustado para alinearse mejor con la imagen */
+    padding-right: 20px;
+    text-align: left !important; /* Forzamos alineación a la izquierda */
+}
+
+/* Ajustes en la imagen */
+.imagen-nosotros {
+    width: 40%; /* Ajustar la proporción */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-top: 0; /* Eliminar el ajuste negativo para evitar superposición */
+}
+
+.imagen-nosotros img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Reglas globales para evitar centrado */
+body, h1, h2, h3, p {
+    text-align: left !important; /* Forzamos alineación a la izquierda en todo el sitio */
+}
+
+
+/* Estilos para la sección de Valores | Misión | Visión */
+.valores-mision-vision {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.valores, .mision, .vision {
+    width: 100%; /* Hacemos que cada sección ocupe todo el ancho */
+    margin-bottom: 20px; /* Espacio entre las secciones */
+}
+
+.valores-mision-vision h3 {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.valores-mision-vision p {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left; /* Aseguramos que el texto esté alineado a la izquierda */
+}
+
+.valores-mision-vision ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    width: 100%;
+    text-align: left; /* Aseguramos que el texto de las listas también esté alineado a la izquierda */
+}
+
+/* Estilos generales de la seccion "Servicios */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.empresa-nombre {
+    font-weight: bold;
+    color: white;
+}
+
+/* Sección Servicios */
+.seccion-servicios {
+    padding: 40px;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenido-servicios h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lista-servicios {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-servicios li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.lista-servicios li:hover {
+    background-color: #ddd;
+}
+
+.lista-servicios h3 {
+    margin: 0;
+}
+
+.lista-servicios p.descripcion {
+    margin-top: 10px;
+    display: none;
+}
+
+.lista-servicios li:hover p.descripcion {
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    margin: 0 10px;
+}
+
+footer a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos para la lista de productos */
+.lista-productos {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-productos li {
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lista-productos li strong {
+    font-weight: bold;
+}
+
+/* Estilos generales para las secciones de productos */
+#servicios, #productos {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+/* Estilos para los botones interactivos de servicios */
+.lista-servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.servicio-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.servicio-item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.servicio-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.servicio-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilos para la lista de productos */
+.lista-productos {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-productos li {
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lista-productos li strong {
+    font-weight: bold;
+}
+
+/* Estilos generales para las secciones */
+#servicios, #productos {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+.servicio {
+    position: relative;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.servicio:hover {
+    background-color: #e0e0e0;
+}
+
+.descripcion {
+    display: none;
+    margin-top: 10px;
+}
+
+.servicio:hover .descripcion {
+    display: block;
+    color: #555;
+}
+/* Estilos para la tabla de productos */
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-productos th, .tabla-productos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla-productos th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.tabla-productos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-productos tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tabla-productos td {
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-productos th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #CCCCCC;
+    color: white;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de la parte contacto */
+#contacto {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario-contacto input, .formulario-contacto textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario-contacto button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #45a049;
+}
+
+/* Información de contacto */
+.informacion-contacto {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.informacion-contacto p {
+    margin: 5px 0;
+}
+
+.informacion-contacto h3 {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+footer .social-icons li {
+    margin: 0 10px;
+}
+
+footer .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+footer .social-icons a:hover {
+    opacity: 0.8;
+}
+
+.notificacion-exito {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Estilos para la página de flujo de procesos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para el diagrama interactivo */
+.diagrama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.proceso {
+    background-color:#4CAF50; 
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.proceso:hover {
+    transform: scale(1.1);
+    background-color: #3e8e41; /* Cambiado para mejorar la animación */
+}
+
+/* Estilos para las flechas entre procesos */
+.flecha {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #4CAF50; /* Cambiado el color de la flecha */
+}
+
+/* Estilos para los detalles del proceso */
+.detalle-proceso {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Estilos para los íconos */
+.proceso i {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para animaciones de hover */
+.proceso:hover {
+    background-color: #3e8e41; /* Color verde oscuro al hacer hover */
+}
+
+/* Ajustes adicionales */
+.proceso:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la página de flujo de trabajo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.diagrama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.proceso {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.proceso:hover {
+    background-color: #45a049;
+}
+
+.flecha {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333;
+}
+
+/* Estilos para los detalles */
+.detalle-proceso {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para la imagen del organigrama */
+.organigrama-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Detalles de los roles */
+.detalle-rol {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .detalle-rol {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .organigrama-img {
+        width: 95%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.documentos-botones button {
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.documentos-botones button:hover {
+    background-color: #555;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Ajusta el tamaño máximo de la imagen al 90% del ancho de la pantalla */
+    max-height: 90%; /* Ajusta el tamaño máximo de la imagen al 90% del alto de la pantalla */
+    width: auto; /* Mantén el ancho automático */
+    height: auto; /* Mantén el alto automático */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+    animation-name: zoomIn;
+    animation-duration: 0.6s; /* Añadimos animación con duración */
+}
+
+/* Definir la animación de zoom */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.1); /* Comienza desde un tamaño muy pequeño */
+        opacity: 0; /* Transparencia inicial */
+    }
+    to {
+        transform: scale(1); /* Crece hasta tamaño completo */
+        opacity: 1; /* Totalmente visible */
+    }
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Centrar todo el contenido de la sección de documentos */
+#documentos-clave {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Añadir espacio entre los elementos */
+#documentos-clave h2 {
+    margin-bottom: 15px;
+}
+
+#documentos-clave p {
+    margin-bottom: 25px;
+}
+
+#documentos-clave .boton-documento {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#documentos-clave .boton-documento:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
