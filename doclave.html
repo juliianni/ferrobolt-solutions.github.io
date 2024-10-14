@@ -23,43 +23,68 @@
     <!-- Sección de documentos clave centrada -->
     <section id="documentos-clave">
         <h2>Documentos clave de la empresa</h2>
-        <p>En esta sección se generan los documentos clave de la empresa, como órdenes de compra, facturas, órdenes de fabricación y eCheqs. Haz clic en cualquiera de los botones para ver los ejemplos.</p>
+        <p>En esta sección se generan los documentos clave de la empresa, como órdenes de compra, facturas, órdenes de fabricación y eCheqs. Haz clic en cualquiera de los botones para ver los ejemplos y su explicación correspondiente.</p>
 
-        <!-- Botones para abrir los modales -->
-        <div class="documentos-botones">
-            <button onclick="mostrarImagen('modalOrdenCompra')">Orden de Compra</button>
-            <button onclick="mostrarImagen('modalFactura')">Factura</button>
-            <button onclick="mostrarImagen('modalOrdenFabricacion')">Orden de Fabricación</button>
-            <button onclick="mostrarImagen('modalEcheq')">Echeq</button>
-            <button onclick="mostrarImagen('modalRemito')">Remito</button>
+        <!-- Documento 1: Orden de Compra -->
+        <div class="documento">
+            <h3>Orden de Compra</h3>
+            <p>El proceso de compra inicia con la requisición de insumos por los departamentos de producción o control de inventario. Tras la autorización del gerente financiero o de compras, se emite una orden de compra y se envía al proveedor.</p>
+            <button onclick="mostrarImagen('modalOrdenCompra')">Ver Orden de Compra</button>
+            <div id="modalOrdenCompra" class="modal">
+                <span class="close" onclick="cerrarModal('modalOrdenCompra')">&times;</span>
+                <img class="modal-content" src="imagenes/OrdCompra.jpg" alt="Orden de Compra">
+                <p class="modal-description">Documento que emite el comprador solicitando la adquisición de bienes o servicios, especificando cantidades, precios y condiciones.</p>
+            </div>
+        </div>
+
+        <!-- Documento 2: Factura -->
+        <div class="documento">
+            <h3>Factura</h3>
+            <p>Comprobante emitido por el proveedor para validar el pago de productos o servicios entregados.</p>
+            <button onclick="mostrarImagen('modalFactura')">Ver Factura</button>
+            <div id="modalFactura" class="modal">
+                <span class="close" onclick="cerrarModal('modalFactura')">&times;</span>
+                <img class="modal-content" src="imagenes/FacturaImg.jpg" alt="Factura">
+                <p class="modal-description">Comprobante emitido por el vendedor que detalla los bienes o servicios vendidos y el monto que el comprador debe pagar.</p>
+            </div>
+        </div>
+
+        <!-- Documento 3: Orden de Fabricación -->
+        <div class="documento">
+            <h3>Orden de Fabricación</h3>
+            <p>Documento que indica al área de producción los insumos y cantidades a fabricar según la planificación.</p>
+            <button onclick="mostrarImagen('modalOrdenFabricacion')">Ver Orden de Fabricación</button>
+            <div id="modalOrdenFabricacion" class="modal">
+                <span class="close" onclick="cerrarModal('modalOrdenFabricacion')">&times;</span>
+                <img class="modal-content" src="imagenes/OrdFabric.jpg" alt="Orden de Fabricación">
+                <p class="modal-description">Documento que autoriza la producción de ciertos productos, especificando cantidades y materiales necesarios.</p>
+            </div>
+        </div>
+
+        <!-- Documento 4: eCheq -->
+        <div class="documento">
+            <h3>eCheq</h3>
+            <p>Herramienta electrónica que permite realizar pagos de forma automatizada y segura entre empresas.</p>
+            <button onclick="mostrarImagen('modalEcheq')">Ver eCheq</button>
+            <div id="modalEcheq" class="modal">
+                <span class="close" onclick="cerrarModal('modalEcheq')">&times;</span>
+                <img class="modal-content" src="imagenes/EcheqImg.jpg" alt="eCheq">
+                <p class="modal-description">Cheque electrónico que permite realizar pagos digitalmente sin la necesidad de emitir un cheque físico.</p>
+            </div>
+        </div>
+
+        <!-- Documento 5: Remito -->
+        <div class="documento">
+            <h3>Remito</h3>
+            <p>Documento que acompaña a la mercadería despachada para validar su recepción por parte del cliente o receptor.</p>
+            <button onclick="mostrarImagen('modalRemito')">Ver Remito</button>
+            <div id="modalRemito" class="modal">
+                <span class="close" onclick="cerrarModal('modalRemito')">&times;</span>
+                <img class="modal-content" src="imagenes/RemImg.jpg" alt="Remito">
+                <p class="modal-description">Documento que acompaña la entrega de mercadería, especificando los productos entregados y que debe ser firmado por el receptor como comprobante de recepción.</p>
+            </div>
         </div>
     </section>
-
-    <!-- Modales para mostrar las imágenes -->
-   <div id="modalOrdenCompra" class="modal">
-    <span class="close" onclick="cerrarModal('modalOrdenCompra')">&times;</span>
-    <img class="modal-content" src="Imagenes/OrdCompra.jpg" alt="Orden de Compra">
-</div>
-
-<div id="modalFactura" class="modal">
-    <span class="close" onclick="cerrarModal('modalFactura')">&times;</span>
-    <img class="modal-content" src="Imagenes/FacturaImg.jpg" alt="Factura">
-</div>
-
-<div id="modalOrdenFabricacion" class="modal">
-    <span class="close" onclick="cerrarModal('modalOrdenFabricacion')">&times;</span>
-    <img class="modal-content" src="Imagenes/OrdFabric.jpg" alt="Orden de Fabricación">
-</div>
-
-<div id="modalRemito" class="modal">
-    <span class="close" onclick="cerrarModal('modalRemito')">&times;</span>
-    <img class="modal-content" src="Imagenes/RemImg.jpg" alt="Remito">
-</div>
-
-<div id="modalEcheq" class="modal">
-    <span class="close" onclick="cerrarModal('modalEcheq')">&times;</span>
-    <img class="modal-content" src="Imagenes/EcheqImg.jpg" alt="Echeq">
-</div>
 
     <script>
         // Mostrar el modal
@@ -74,5 +99,6 @@
     </script>
 </body>
 </html>
+
 
 
