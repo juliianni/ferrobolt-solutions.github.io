@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <!-- Menú de navegación -->
     <header>
         <nav class="navbar">
             <ul>
@@ -20,15 +19,12 @@
         </nav>
     </header>
 
-    <!-- Sección de organigrama -->
     <section id="organigrama">
         <h2>División de Roles de la empresa</h2>
         <p>A continuación, se muestra el organigrama de la empresa. Haz clic en cada área para más detalles.</p>
 
-        <!-- Imagen del organigrama con el mapa -->
-        <img src="Imagenes/OrgImg.png" usemap="#orgMap" alt="Organigrama de la Empresa" class="organigrama-img">
+        <img src="Imagenes/OrgImg.png" usemap="#orgMap" alt="Organigrama de la Empresa" class="organigrama-img" id="orgImg">
 
-        <!-- Mapa de la imagen para definir las áreas clicables -->
         <map name="orgMap">
             <area shape="rect" coords="649,10,854,48" alt="Directorio" onclick="mostrarDetalle('directorio')">
             <area shape="rect" coords="385,80,590,118" alt="Gerente Comercial" onclick="mostrarDetalle('gerenteComercial')">
@@ -54,11 +50,38 @@
             <area shape="rect" coords="647,210,852,248" alt="Recep. de Proveedores" onclick="mostrarDetalle('recepProveedores')">
         </map>
 
-        <!-- Detalles del rol seleccionado -->
         <div id="detalle" class="detalle-rol"></div>
     </section>
 
     <script>
+        // Función para recalcular las coordenadas
+        function recalcularCoords() {
+            const img = document.getElementById('orgImg');
+            const width = img.naturalWidth;
+            const currentWidth = img.clientWidth;
+            const scaleFactor = currentWidth / width;
+
+            const areas = document.querySelectorAll('area');
+            areas.forEach(area => {
+                const coords = area.dataset.originalCoords.split(',');
+                const scaledCoords = coords.map(coord => Math.round(coord * scaleFactor));
+                area.coords = scaledCoords.join(',');
+            });
+        }
+
+        // Guardar las coordenadas originales al cargar la página
+        window.addEventListener('load', () => {
+            const areas = document.querySelectorAll('area');
+            areas.forEach(area => {
+                area.dataset.originalCoords = area.coords;
+            });
+
+            recalcularCoords(); // Recalcular coordenadas iniciales
+        });
+
+        // Recalcular coordenadas al redimensionar la ventana
+        window.addEventListener('resize', recalcularCoords);
+
         // Función para mostrar el detalle de cada rol
         function mostrarDetalle(rol) {
             const detalle = document.getElementById('detalle');
@@ -108,9 +131,10 @@
                 detalle.innerHTML = '<h3>Admin. Contable</h3><p>Gestiona y controla las cuentas contables de la empresa para asegurar un manejo financiero óptimo.</p>';
             }
         }
-    </script> 
+    </script>
 </body>
 </html>
+
 
 
 
