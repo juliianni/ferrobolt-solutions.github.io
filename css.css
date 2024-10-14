@@ -871,8 +871,8 @@ p {
 .organigrama-img {
     display: block;
     margin: 20px auto;
-    width: 1460px; /* Ancho exacto de la imagen */
-    height: 479px; /* Altura exacta de la imagen */
+    width: 1460px; /* Tamaño exacto de la imagen */
+    height: auto; /* Mantén la proporción */
 }
 
 /* Detalles de los roles */
