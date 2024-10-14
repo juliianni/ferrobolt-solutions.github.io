@@ -870,9 +870,9 @@ p {
 /* Estilos para la imagen del organigrama */
 .organigrama-img {
     display: block;
-    max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 0 auto; /* Centra la imagen */
+    margin: 20px auto;
+    width: 1460px; /* Ancho exacto de la imagen */
+    height: 479px; /* Altura exacta de la imagen */
 }
 
 /* Detalles de los roles */
