@@ -33,15 +33,15 @@
                 <i class="fas fa-bullhorn"></i> Marketing
             </div>
             <div class="flecha">➔</div>
-            <div class="proceso" title="Verifica el inventario disponible" onclick="mostrarDetalle('stock')">
+            <div class="proceso" title="Monitorea los niveles de insumos y productos disponibles, asegurándose de que haya suficientes materiales para la producción, y emitiendo órdenes de compra cuando sea necesario. Ejemplo: Si el inventario detecta que quedan poca materia prima  para la fabricación, se envía una orden de compra para reabastecer ese insumo antes de que se agote." onclick="mostrarDetalle('stock')">
                 <i class="fas fa-boxes"></i> Stock/Inventario
             </div>
             <div class="flecha">➔</div>
-            <div class="proceso" title="Fabricación de los productos" onclick="mostrarDetalle('fabricacion')">
+            <div class="proceso" title="Es el proceso donde se producen los bienes, desde la emisión de órdenes de producción hasta el control del uso de insumos, garantizando que los productos terminados cumplan con las especificaciones. Ejemplo: Si se recibe una orden para fabricar 1,000 profuctos, la fabricación organiza el proceso donde se utiliza los materiales necesarios y añade el producto terminado al stock." onclick="mostrarDetalle('fabricacion')">
                 <i class="fas fa-industry"></i> Fabricación
             </div>
             <div class="flecha">➔</div>
-            <div class="proceso" title="Controla la calidad del producto" onclick="mostrarDetalle('controlcalidad')">
+            <div class="proceso" title="Revisa que los productos fabricados o comprados cumplan con los estándares técnicos y de calidad requeridos, rechazando aquellos que no los cumplen. Ejemplo: Si en una inspección se descubre que falte algo como no tener la resistencia adecuada, se rechaza y no se distribuyen hasta que se fabriquen correctamente." onclick="mostrarDetalle('controlcalidad')">
                 <i class="fas fa-clipboard-check"></i> Control de calidad
             </div>
         </div>
@@ -57,11 +57,11 @@
             if (proceso === 'marketing') {
                 detalle.innerHTML = '<h3>Marketing</h3><p>Se encarga de estimar la demanda de productos, basándose en datos de ventas y tendencias del mercado, para que otras áreas puedan planificar la producción y el abastecimiento de materiales. Ejemplo: Si el marketing prevé un aumento en la demanda para el verano/invierno, informa a producción para que fabriquen más unidades y preparen los materiales necesarios.</p>';
             } else if (proceso === 'stock') {
-                detalle.innerHTML = '<h3>Stock/Inventario</h3><p>Verifica el inventario disponible para la producción.</p>';
+                detalle.innerHTML = '<h3>Stock/Inventario</h3><p>Monitorea los niveles de insumos y productos disponibles, asegurándose de que haya suficientes materiales para la producción, y emitiendo órdenes de compra cuando sea necesario. Ejemplo: Si el inventario detecta que quedan poca materia prima  para la fabricación, se envía una orden de compra para reabastecer ese insumo antes de que se agote.</p>';
             } else if (proceso === 'fabricacion') {
-                detalle.innerHTML = '<h3>Fabricación</h3><p>Se lleva a cabo el proceso de manufactura de los productos.</p>';
+                detalle.innerHTML = '<h3>Fabricación</h3><p>Es el proceso donde se producen los bienes, desde la emisión de órdenes de producción hasta el control del uso de insumos, garantizando que los productos terminados cumplan con las especificaciones. Ejemplo: Si se recibe una orden para fabricar 1,000 profuctos, la fabricación organiza el proceso donde se utiliza los materiales necesarios y añade el producto terminado al stock.</p>';
             } else if (proceso === 'controlcalidad') {
-                detalle.innerHTML = '<h3>Control de calidad</h3><p>Asegura que los productos cumplan con los estándares requeridos.</p>';
+                detalle.innerHTML = '<h3>Control de calidad</h3><p>Revisa que los productos fabricados o comprados cumplan con los estándares técnicos y de calidad requeridos, rechazando aquellos que no los cumplen. Ejemplo: Si en una inspección se descubre que falte algo como no tener la resistencia adecuada, se rechaza y no se distribuyen hasta que se fabriquen correctamente.</p>';
             }
         }
     </script>
