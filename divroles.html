@@ -28,8 +28,8 @@
         <map name="orgMap">
             <area shape="rect" coords="580,1,789,28" alt="Directorio" onclick="mostrarDetalle('directorio')">
             <area shape="rect" coords="361,51,527,79" alt="Gerente Comercial" onclick="mostrarDetalle('gerenteComercial')">
-            <area shape="rect" coords="596,52,774,78" alt="Gerente Financiero" onclick="mostrarDetalle('gerenteFinanciero')">
-            <area shape="rect" coords="852,52,1061,81" alt="Gerente de Compras" onclick="mostrarDetalle('gerenteCompras')">
+            <area shape="rect" coords="851,49,1062,80" alt="Gerente Financiero" onclick="mostrarDetalle('gerenteFinanciero')">
+            <area shape="rect" coords="594,50,774,82" alt="Gerente de Compras" onclick="mostrarDetalle('gerenteCompras')">
             <area shape="rect" coords="360,103,527,148" alt="Ejecutivo de Ventas Corporativas" onclick="mostrarDetalle('ejecutivoVentasCorporativas')">
             <area shape="rect" coords="849,119,1067,161" alt="Gerente de Administración" onclick="mostrarDetalle('gerenteAdministracion')">
             <area shape="rect" coords="362,161,527,209" alt="Administrador de Ventas" onclick="mostrarDetalle('adminVentas')">
@@ -49,6 +49,7 @@
             <area shape="rect" coords="360,400,528,441" alt="Encargado de Depósito" onclick="mostrarDetalle('deposito')">
             <area shape="rect" coords="358,489,526,530" alt="Supervisor de Recepción" onclick="mostrarDetalle('recepProveedores')">
             <area shape="rect" coords="588,196,777,237" alt="Coordinador de Compras" onclick="mostrarDetalle('coordinadorCompras')">
+            <area shape="rect" coords="591,120,771,153" alt="Jefe De Compras" onclick="mostrarDetalle('jefeCompras')">
         </map>
 
         <div id="detalle" class="detalle-rol"></div>
@@ -131,7 +132,9 @@
             } else if (rol === 'recepProveedores') {
                 detalle.innerHTML = '<h3>Supervisor de Recepción</h3><p>Responsable de revisar y aceptar los productos que llegan de los proveedores. Aquí se coteja la mercadería recibida con la Orden de Compra y se emite un informe que confirma que todo está en regla. Esto garantiza que la empresa solo pague por lo que realmente ha recibido.</p>';
             } else if (rol === 'coordinadorCompras') {
-                detalle.innerHTML = '<h3>Coordinador de Compras</h3><p>Coordina la gestión de compras asegurando el abastecimiento de productos para la empresa. Esto incluye la emisión y seguimiento de Órdenes de Compra para garantizar que los productos lleguen a tiempo. Además, se encarga de la gestión de documentos como Facturas de Proveedores y Remitos, que permiten controlar que lo solicitado y lo recibido estén en línea.</p>';
+             detalle.innerHTML = '<h3>Coordinador de Compras</h3><p>Coordina la gestión de compras asegurando el abastecimiento de productos para la empresa. Esto incluye la emisión y seguimiento de Órdenes de Compra para garantizar que los productos lleguen a tiempo. Además, se encarga de la gestión de documentos como Facturas de Proveedores y Remitos, que permiten controlar que lo solicitado y lo recibido estén en línea.</p>';
+            } else if (rol === 'jefeCompras') {
+                detalle.innerHTML = '<h3>Jefe De Compras</h3><p>Responsable de la coordinación diaria de las actividades relacionadas con las adquisiciones de productos y servicios para la empresa. Supervisa la relación con proveedores, asegura la correcta emisión de las Órdenes de Compra y verifica la recepción de mercancías, comparando los productos con los documentos clave como Remitos y Facturas para garantizar que los pedidos se reciban correctamente.</p>';
             }
         }
     </script>
