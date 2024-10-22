@@ -896,6 +896,17 @@ p {
     margin: 20px auto;
     max-width: 100%;
     height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px; /* Agregamos un borde redondeado */
+}
+
+/* Estilos para las áreas activas del organigrama */
+area {
+    cursor: pointer;
+}
+
+area:hover {
+    outline: 3px solid #00FF00; /* Resalta el área activa */
 }
 
 /* Detalles de los roles */
@@ -908,6 +919,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    border-radius: 8px; /* Agregar borde redondeado */
 }
 
 /* Responsividad para dispositivos móviles */
@@ -918,7 +930,7 @@ p {
     }
 
     .organigrama-img {
-        width: 95%;
+        width: 100%; /* Aseguramos que la imagen ocupe el ancho completo en pantallas pequeñas */
     }
 }
 
@@ -934,6 +946,26 @@ h2 {
     margin-bottom: 20px;
 }
 
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #555;
+}
+
 .documentos-botones button {
     background-color: #333;
     color: white;
@@ -949,20 +981,6 @@ h2 {
     background-color: #555;
 }
 
-.documentos-botones button {
-    background-color: #333;
-    color: white;
-    padding: 15px 25px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.documentos-botones button:hover {
-    background-color: #555;
-}
 
 /* Estilos para el modal */
 .modal {
