@@ -29,11 +29,11 @@
         <div class="diagrama">
             <div class="proceso" onclick="mostrarDetalle('ventas')">Ventas</div>
             <span class="flecha">→</span>
-            <div class="proceso" onclick="mostrarDetalle('compras')">Compras</div>
+            <div class="proceso" onclick="mostrarDetalle('logistica')">Logística</div>
             <span class="flecha">→</span>
-            <div class="proceso" onclick="mostrarDetalle('logistica')">Logística/Fabricación</div>
+            <div class="proceso" onclick="mostrarDetalle('produccion')">Producción</div>
             <span class="flecha">→</span>
-            <div class="proceso" onclick="mostrarDetalle('calidad')">Control de Calidad</div>
+            <div class="proceso" onclick="mostrarDetalle('distribucion')">Distribución</div>
             <span class="flecha">→</span>
             <div class="proceso" onclick="mostrarDetalle('finanzas')">Finanzas</div>
         </div>
@@ -48,14 +48,14 @@
             const detalle = document.getElementById('detalle');
             if (proceso === 'ventas') {
                 detalle.innerHTML = '<h3>Ventas</h3><p>Aquí es donde se recibe una orden de un cliente. El departamento de ventas revisa las necesidades del cliente y genera un pedido, que será la base de las actividades siguientes. En esta etapa, se recolectan las necesidades del cliente o se levanta el pedido, que puede ser realizado electrónicamente o de forma manual. El departamento de ventas verifica el estado de las cuentas corrientes del cliente para asegurarse de que no haya deudas pendientes antes de proceder con el pedido.</p>';
-            } else if (proceso === 'compras') {
-                detalle.innerHTML = '<h3>Compras</h3><p>Una vez que se ha verificado la disponibilidad del cliente y el pedido ha sido levantado, el área de compras revisa si el stock actual es suficiente para cubrirlo. Si no hay stock suficiente, el área de control de inventario emite una requisición de compra para adquirir los insumos necesarios. Se generan órdenes de compra que, dependiendo del monto, pueden requerir la aprobación del gerente financiero o del gerente general. Este proceso asegura que no haya interrupciones en la producción debido a la falta de insumos. </p>';
             } else if (proceso === 'logistica') {
-                detalle.innerHTML = '<h3>Logística/Fabricación</h3><p>El área de logística coordina el envío de productos si hay stock suficiente. Sin embargo, si se necesita fabricar productos, se genera una orden de fabricación. Durante la producción, se manejan los insumos, y se generan informes parciales de consumo para mantener un control de lo que se está utilizando. Una vez que se completa la producción, se cierra la orden de fabricación, y los productos terminados se suman al inventario. Este proceso incluye la verificación del consumo real frente a lo planeado, asegurando que los insumos se gestionen de manera eficiente. Proceso clave: Emisión de órdenes de fabricación, control de insumos y cierre de la orden de fabricación. </p>';
-            } else if (proceso === 'calidad') {
-                detalle.innerHTML = '<h3>Control de Calidad</h3><p>Cuando los productos o insumos llegan a la empresa, el departamento de control de calidad revisa que cumplan con los estándares establecidos. Si el producto pasa la inspección de calidad, se genera un remito para certificar que los productos fueron recibidos correctamente. Si el producto no cumple con las especificaciones, se genera un informe de devolución o rechazo, y el producto se envía de vuelta al proveedor. Esta etapa es clave para evitar que productos defectuosos entren en el ciclo productivo o sean enviados a los clientes. Proceso clave: Inspección de calidad, emisión de remitos, e informes de devolución en caso de rechazo. </p>';
+                detalle.innerHTML = '<h3>Logística</h3><p>El departamento de logística se encarga de gestionar y coordinar el movimiento de productos, tanto de materias primas como de productos terminados. En esta fase, se organizan los recursos necesarios para llevar los insumos a las áreas de producción o para preparar el envío a los clientes una vez completada la fabricación. Logística asegura que todo llegue a su destino de manera oportuna y eficiente, sin retrasos en la cadena de producción o entrega.</p>';
+            } else if (proceso === 'produccion') {
+                detalle.innerHTML = '<h3>Producción</h3><p>En la fase de producción, se fabrican o ensamblan los productos. Aquí se siguen estrictamente los procedimientos de producción para garantizar que los productos cumplan con los estándares de calidad establecidos. La producción utiliza los insumos proporcionados por logística, y una vez completada, los productos terminados están listos para ser inspeccionados o enviados a la fase de distribución. Este proceso incluye la planificación de recursos y la gestión de tiempos de producción para cumplir con las fechas de entrega.</p>';
+            } else if (proceso === 'distribucion') {
+                detalle.innerHTML = '<h3>Distribución</h3><p>El departamento de distribución se asegura de que los productos terminados lleguen a los clientes. Organiza los envíos, ya sea a nivel local o internacional, y se encarga de coordinar con transportistas para garantizar que los productos lleguen en perfectas condiciones y a tiempo. La distribución también maneja la logística de almacenamiento temporal si es necesario antes del envío final.</p>';
             } else if (proceso === 'finanzas') {
-                detalle.innerHTML = '<h3>Finanzas</h3><p>Finalmente, el departamento de finanzas gestiona la facturación y cobranzas. Genera la factura correspondiente y asegura que se complete el pago, ya sea al proveedor (en caso de compras) o al cliente (en caso de ventas). </p>';
+                detalle.innerHTML = '<h3>Finanzas</h3><p>El departamento de finanzas gestiona la facturación y las cobranzas. Genera las facturas correspondientes para los clientes y gestiona los pagos tanto a proveedores como a empleados. En esta etapa se aseguran de que todos los aspectos financieros estén en orden, desde la entrada de dinero hasta la salida de fondos, manteniendo la estabilidad económica de la empresa.</p>';
             }
         }
     </script>
