@@ -36,6 +36,8 @@
             <div class="proceso" onclick="mostrarDetalle('distribucion')">Distribución</div>
             <span class="flecha">→</span>
             <div class="proceso" onclick="mostrarDetalle('finanzas')">Finanzas</div>
+            <span class="flecha">→</span>
+            <div class="proceso" onclick="mostrarDetalle('atencion')">Atención al Cliente</div>
         </div>
 
         <!-- Detalles de cada proceso -->
@@ -56,8 +58,11 @@
                 detalle.innerHTML = '<h3>Distribución</h3><p>El departamento de distribución se asegura de que los productos terminados lleguen a los clientes. Organiza los envíos, ya sea a nivel local o internacional, y se encarga de coordinar con transportistas para garantizar que los productos lleguen en perfectas condiciones y a tiempo. La distribución también maneja la logística de almacenamiento temporal si es necesario antes del envío final.</p>';
             } else if (proceso === 'finanzas') {
                 detalle.innerHTML = '<h3>Finanzas</h3><p>El departamento de finanzas gestiona la facturación y las cobranzas. Genera las facturas correspondientes para los clientes y gestiona los pagos tanto a proveedores como a empleados. En esta etapa se aseguran de que todos los aspectos financieros estén en orden, desde la entrada de dinero hasta la salida de fondos, manteniendo la estabilidad económica de la empresa.</p>';
+            } else if (proceso === 'atencion') {
+                detalle.innerHTML = '<h3>Atención al Cliente</h3><p>Atención al Cliente maneja todas las consultas, problemas o devoluciones relacionadas con los productos después de la entrega. Si un cliente tiene problemas con el pedido, necesita una devolución o soporte técnico, esta es la etapa donde se resuelven las incidencias. Esto asegura que el cliente quede satisfecho con el producto final.</p>';
             }
         }
     </script>
 </body>
 </html>
+
