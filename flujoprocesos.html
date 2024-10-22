@@ -37,15 +37,19 @@
             <i class="fas fa-boxes"></i> Stock/Inventario
         </div>
         <div class="flecha">➔</div>
-        <div class="proceso" title="Una vez que se ha verificado la disponibilidad del cliente y el pedido ha sido levantado, el área de compras revisa si el stock actual es suficiente para cubrirlo. Si no hay stock suficiente, el área de control de inventario emite una requisición de compra para adquirir los insumos necesarios. Se generan órdenes de compra que, dependiendo del monto, pueden requerir la aprobación del gerente financiero o del gerente general. Este proceso asegura que no haya interrupciones en la producción debido a la falta de insumos." onclick="mostrarDetalle('compras')">
+        <div class="proceso" title="Una vez que se ha verificado la disponibilidad del cliente y el pedido ha sido levantado, el área de compras revisa si el stock actual es suficiente para cubrirlo. Si no hay stock suficiente, el área de control de inventario emite una requisición de compra para adquirir los insumos necesarios. Se generan órdenes de compra que, dependiendo del monto, pueden requerir la aprobación del gerente financiero o del gerente general. Este proceso asegura que no haya interrupciones en la producción debido a la falta de insumos." onclick="mostrarDetalle('compras')">
             <i class="fas fa-shopping-cart"></i> Compras
+        </div>
+        <div class="flecha">➔</div>
+        <div class="proceso" title="Planifica el proceso de producción, estableciendo tiempos, recursos necesarios y prioridades. Asegura que se asignen correctamente los recursos para cumplir con los plazos y la demanda del cliente." onclick="mostrarDetalle('planificacion')">
+            <i class="fas fa-tasks"></i> Planificación de la Producción
         </div>
         <div class="flecha">➔</div>
         <div class="proceso" title="Es el proceso donde se producen los bienes, desde la emisión de órdenes de producción hasta el control del uso de insumos, garantizando que los productos terminados cumplan con las especificaciones. Ejemplo: Si se recibe una orden para fabricar 1,000 productos, la fabricación organiza el proceso donde se utiliza los materiales necesarios y añade el producto terminado al stock." onclick="mostrarDetalle('fabricacion')">
             <i class="fas fa-industry"></i> Fabricación
         </div>
         <div class="flecha">➔</div>
-        <div class="proceso" title="Revisa que los productos fabricados o comprados cumplan con los estándares técnicos y de calidad requeridos, rechazando aquellos que no los cumplen. Ejemplo: Si en una inspección se descubre que falte algo como no tener la resistencia adecuada, se rechaza y no se distribuyen hasta que se fabriquen correctamente." onclick="mostrarDetalle('controlcalidad')">
+        <div class="proceso" title="Revisa que los productos fabricados o comprados cumplan con los estándares técnicos y de calidad requeridos, rechazando aquellos que no los cumplen. Ejemplo: Si en una inspección se descubre que falte algo como no tener la resistencia adecuada, se rechaza y no se distribuyen hasta que se fabriquen correctamente." onclick="mostrarDetalle('controlcalidad')">
             <i class="fas fa-clipboard-check"></i> Control de calidad
         </div>
     </div>
@@ -61,13 +65,15 @@
         if (proceso === 'marketing') {
             detalle.innerHTML = '<h3>Marketing</h3><p>Se encarga de estimar la demanda de productos, basándose en datos de ventas y tendencias del mercado, para que otras áreas puedan planificar la producción y el abastecimiento de materiales. Ejemplo: Si el marketing prevé un aumento en la demanda para el verano/invierno, informa a producción para que fabriquen más unidades y preparen los materiales necesarios.</p>';
         } else if (proceso === 'stock') {
-            detalle.innerHTML = '<h3>Stock/Inventario</h3><p>Monitorea los niveles de insumos y productos disponibles, asegurándose de que haya suficientes materiales para la producción, y emitiendo órdenes de compra cuando sea necesario. Ejemplo: Si el inventario detecta que quedan poca materia prima  para la fabricación, se envía una orden de compra para reabastecer ese insumo antes de que se agote.</p>';
+            detalle.innerHTML = '<h3>Stock/Inventario</h3><p>Monitorea los niveles de insumos y productos disponibles, asegurándose de que haya suficientes materiales para la producción, y emitiendo órdenes de compra cuando sea necesario. Ejemplo: Si el inventario detecta que quedan poca materia prima para la fabricación, se envía una orden de compra para reabastecer ese insumo antes de que se agote.</p>';
         } else if (proceso === 'compras') {
-            detalle.innerHTML = '<h3>Compras</h3><p>Una vez que se ha verificado la disponibilidad del cliente y el pedido ha sido levantado, el área de compras revisa si el stock actual es suficiente para cubrirlo. Si no hay stock suficiente, el área de control de inventario emite una requisición de compra para adquirir los insumos necesarios. Se generan órdenes de compra que, dependiendo del monto, pueden requerir la aprobación del gerente financiero o del gerente general. Este proceso asegura que no haya interrupciones en la producción debido a la falta de insumos.</p>';
+            detalle.innerHTML = '<h3>Compras</h3><p>Una vez que se ha verificado la disponibilidad del cliente y el pedido ha sido levantado, el área de compras revisa si el stock actual es suficiente para cubrirlo. Si no hay stock suficiente, el área de control de inventario emite una requisición de compra para adquirir los insumos necesarios. Se generan órdenes de compra que, dependiendo del monto, pueden requerir la aprobación del gerente financiero o del gerente general. Este proceso asegura que no haya interrupciones en la producción debido a la falta de insumos.</p>';
+        } else if (proceso === 'planificacion') {
+            detalle.innerHTML = '<h3>Planificación de la Producción</h3><p>Planifica el proceso de producción, estableciendo tiempos, recursos necesarios y prioridades. Asegura que se asignen correctamente los recursos para cumplir con los plazos y la demanda del cliente.</p>';
         } else if (proceso === 'fabricacion') {
             detalle.innerHTML = '<h3>Fabricación</h3><p>Es el proceso donde se producen los bienes, desde la emisión de órdenes de producción hasta el control del uso de insumos, garantizando que los productos terminados cumplan con las especificaciones. Ejemplo: Si se recibe una orden para fabricar 1,000 productos, la fabricación organiza el proceso donde se utiliza los materiales necesarios y añade el producto terminado al stock.</p>';
         } else if (proceso === 'controlcalidad') {
-            detalle.innerHTML = '<h3>Control de calidad</h3><p>Revisa que los productos fabricados o comprados cumplan con los estándares técnicos y de calidad requeridos, rechazando aquellos que no los cumplen. Ejemplo: Si en una inspección se descubre que falte algo como no tener la resistencia adecuada, se rechaza y no se distribuyen hasta que se fabriquen correctamente.</p>';
+            detalle.innerHTML = '<h3>Control de calidad</h3><p>Revisa que los productos fabricados o comprados cumplan con los estándares técnicos y de calidad requeridos, rechazando aquellos que no los cumplen. Ejemplo: Si en una inspección se descubre que falte algo como no tener la resistencia adecuada, se rechaza y no se distribuyen hasta que se fabriquen correctamente.</p>';
         }
     }
 </script>
