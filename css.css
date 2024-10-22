@@ -890,49 +890,47 @@ p {
     text-decoration: none;
 }
 
-/* Estilos para la imagen del organigrama */
-.organigrama-img {
-    display: block;
-    margin: 20px auto;
+/* Ajustamos el contenedor para el diagrama */
+.mxgraph {
     max-width: 100%;
-    height: auto;
-}
-
-/* Detalles de los roles */
-.detalle-rol {
-    margin-top: 20px;
-    padding: 15px;
+    height: 800px; /* Ajusta la altura según el tamaño de tu diagrama */
     border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+    margin: 20px auto;
 }
 
-/* Responsividad para dispositivos móviles */
-@media (max-width: 768px) {
-    .detalle-rol {
-        max-width: 95%;
-        padding: 10px;
-    }
-
-    .organigrama-img {
-        width: 95%;
-    }
-}
-
+/* Opciones de diseño para el resto de la página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    text-align: center;
     background-color: #f5f5f5;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #555;
 }
 
 h2 {
     margin-bottom: 20px;
 }
+
 
 .documentos-botones button {
     background-color: #333;
