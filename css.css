@@ -401,6 +401,7 @@ h2 {
 p {
     font-size: 18px;
 }
+
 /* Estilos para los botones interactivos de servicios */
 .lista-servicios {
     display: flex;
@@ -469,6 +470,7 @@ h2 {
 p {
     font-size: 18px;
 }
+
 .servicio {
     position: relative;
     margin: 20px 0;
@@ -492,6 +494,7 @@ p {
     display: block;
     color: #555;
 }
+
 /* Estilos para la tabla de productos */
 .tabla-productos {
     width: 100%;
@@ -530,6 +533,11 @@ p {
     padding-bottom: 12px;
     background-color: #CCCCCC;
     color: white;
+}
+
+/* Alinear los precios a la derecha */
+.tabla-productos td:nth-child(3) {
+    text-align: right;
 }
 
 /* Estilos generales */
