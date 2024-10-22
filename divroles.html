@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>División de Roles - FerroBolt Solutions</title>
-    <link rel="stylesheet" href="css.css">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -20,120 +21,27 @@
     </header>
 
     <section id="organigrama">
-        <h2>División de Roles de la empresa</h2>
-        <p>A continuación, se muestra el organigrama de la empresa. Haz clic en cada área para más detalles.</p>
+        <h2>División de Roles de la Empresa</h2>
+        <p>A continuación, se muestra el organigrama interactivo de la empresa.</p>
 
-        <img src="Imagenes/OrgImg.png" usemap="#orgMap" alt="Organigrama de la Empresa" class="organigrama-img" id="orgImg">
+        <!-- Contenedor del diagrama interactivo de diagrams.net -->
+        <div class="mxgraph" 
+            data-mxgraph='{
+                "highlight": "#00FF00",
+                "nav": true,
+                "resize": true,
+                "toolbar": "zoom layers tags lightbox",
+                "edit": "_blank",
+                "xml": "<mxfile host=\\"app.diagrams.net\\" modified=\\"2024-10-22T06:16:30.433Z\\" agent=\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\\" etag=\\"jHlTxgyRAgHSz3JLpECy\\" version=\\"21.3.2\\" type=\\"google\\"><diagram name=\\"Página-1\\" id=\\"0hoap2aF9ZNG5vsh78In\\"><mxGraphModel dx=\\"1855\\" dy=\\"501\\" grid=\\"1\\" gridSize=\\"10\\" guides=\\"1\\" tooltips=\\"1\\" connect=\\"1\\" arrows=\\"1\\" fold=\\"1\\" page=\\"1\\" pageScale=\\"1\\" pageWidth=\\"827\\" pageHeight=\\"1169\\" math=\\"0\\" shadow=\\"0\\"><root><mxCell id=\\"0\\" /><mxCell id=\\"1\\" parent=\\"0\\" /><mxCell id=\\"UH6RA-_O7JzxoIR1tQ5x-1\\" value=\\"Directorio\\" style=\\"rounded=1;whiteSpace=wrap;html=1;fontSize=20;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;align=center;\\" vertex=\\"1\\" parent=\\"1\\"><mxGeometry x=\\"309\\" y=\\"50\\" width=\\"213\\" height=\\"30\\" as=\\"geometry\\" /></mxCell><mxCell id=\\"UH6RA-_O7JzxoIR1tQ5x-2\\" value=\\"Gerente De Compras\\" style=\\"rounded=1;whiteSpace=wrap;html=1;fontSize=17;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;\\" vertex=\\"1\\" parent=\\"1\\"><mxGeometry x=\\"325\\" y=\\"100\\" width=\\"181\\" height=\\"30\\" as=\\"geometry\\" /></mxCell></root></mxGraphModel></diagram></mxfile>"
+            }'>
+        </div>
 
-        <map name="orgMap">
-            <area shape="rect" coords="649,10,854,48" alt="Directorio" onclick="mostrarDetalle('directorio')">
-            <area shape="rect" coords="385,80,590,118" alt="Gerente Comercial" onclick="mostrarDetalle('gerenteComercial')">
-            <area shape="rect" coords="940,81,1145,119" alt="Gerente Financiero" onclick="mostrarDetalle('gerenteFinanciero')">
-            <area shape="rect" coords="647,84,852,122" alt="Compras" onclick="mostrarDetalle('compras')">
-            <area shape="rect" coords="380,147,585,185" alt="Ventas Empresas" onclick="mostrarDetalle('ventasEmpresas')">
-            <area shape="rect" coords="938,147,1143,185" alt="Jefe Administración" onclick="mostrarDetalle('jefeAdministracion')">
-            <area shape="rect" coords="380,205,585,243" alt="Admin de ventas" onclick="mostrarDetalle('adminVentas')">
-            <area shape="rect" coords="938,200,1143,238" alt="Pago Proveedores" onclick="mostrarDetalle('pagoProveedores')">
-            <area shape="rect" coords="939,254,1144,292" alt="Caja" onclick="mostrarDetalle('caja')">
-            <area shape="rect" coords="940,309,1145,347" alt="Cobranza" onclick="mostrarDetalle('cobranza')">
-            <area shape="rect" coords="940,363,1145,401" alt="Admin Contable" onclick="mostrarDetalle('adminContable')">
-            <area shape="rect" coords="941,418,1146,456" alt="Facturación" onclick="mostrarDetalle('facturacion')">
-            <area shape="rect" coords="67,149,272,187" alt="Jefe de Logística" onclick="mostrarDetalle('jefeLogistica')">
-            <area shape="rect" coords="63,208,268,246" alt="Expedición" onclick="mostrarDetalle('expedicion')">
-            <area shape="rect" coords="63,264,268,302" alt="Choferes" onclick="mostrarDetalle('choferes')">
-            <area shape="rect" coords="1239,142,1444,180" alt="RRHH" onclick="mostrarDetalle('rrhh')">
-            <area shape="rect" coords="1239,224,1444,262" alt="Maestranza" onclick="mostrarDetalle('maestranza')">
-            <area shape="rect" coords="379,264,584,302" alt="Act. de Costos" onclick="mostrarDetalle('actCostos')">
-            <area shape="rect" coords="374,312,579,350" alt="Jefe de Mostrador" onclick="mostrarDetalle('jefeMostrador')">
-            <area shape="rect" coords="374,366,579,404" alt="Ventas Mostrador" onclick="mostrarDetalle('ventasMostrador')">
-            <area shape="rect" coords="374,423,579,461" alt="Deposito" onclick="mostrarDetalle('deposito')">
-            <area shape="rect" coords="647,210,852,248" alt="Recep. de Proveedores" onclick="mostrarDetalle('recepProveedores')">
-        </map>
-
-        <div id="detalle" class="detalle-rol"></div>
+        <!-- Script para habilitar el visor de diagrams.net -->
+        <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
     </section>
-
-    <script>
-        // Función para recalcular las coordenadas
-        function recalcularCoords() {
-            const img = document.getElementById('orgImg');
-            const width = img.naturalWidth;
-            const currentWidth = img.clientWidth;
-            const scaleFactor = currentWidth / width;
-
-            const areas = document.querySelectorAll('area');
-            areas.forEach(area => {
-                const coords = area.dataset.originalCoords.split(',');
-                const scaledCoords = coords.map(coord => Math.round(coord * scaleFactor));
-                area.coords = scaledCoords.join(',');
-            });
-        }
-
-        // Guardar las coordenadas originales al cargar la página
-        window.addEventListener('load', () => {
-            const areas = document.querySelectorAll('area');
-            areas.forEach(area => {
-                area.dataset.originalCoords = area.coords;
-            });
-
-            recalcularCoords(); // Recalcular coordenadas iniciales
-        });
-
-        // Recalcular coordenadas al redimensionar la ventana
-        window.addEventListener('resize', recalcularCoords);
-
-        // Función para mostrar el detalle de cada rol
-        function mostrarDetalle(rol) {
-            const detalle = document.getElementById('detalle');
-            if (rol === 'directorio') {
-                detalle.innerHTML = '<h3>Directorio</h3><p>El directorio es el órgano de máxima autoridad dentro de Ferrobolt Solutions, es el encargado de supervisar todas las operaciones y de la toma de decisiones. Esto incluye definir políticas internas como los estándares de calidad, selección de proveedores, y políticas de precios, asegurando que la empresa se mantenga alineada con sus objetivos a largo plazo.</p>';
-            } else if (rol === 'gerenteComercial') {
-                detalle.innerHTML = '<h3>Gerente Comercial</h3><p>El Gerente Comercial en Ferrobolt es la persona encargada de coordinar todas las actividades relacionadas con las ventas, tanto mayoristas como minoristas. Su función principal es supervisar las áreas de venta a empresas, venta en mostrador, logística y expedición, asegurándose de que todos los departamentos trabajen de manera eficiente para cumplir con las expectativas de los clientes.</p>';
-            } else if (rol === 'compras') {
-                detalle.innerHTML = '<h3>Compras</h3><p>El área de compras tiene como principal función asegurar que siempre haya productos disponibles en stock para satisfacer la demanda. Este departamento trabaja en conjunto con el depósito y ventas, emitiendo la Orden de Compra cada vez que se detecta la necesidad de reabastecimiento. Además, el área de compras es responsable de negociar con los proveedores para conseguir los mejores precios y condiciones de compra.</p>';
-            } else if (rol === 'gerenteFinanciero') {
-                detalle.innerHTML = '<h3>Gerente Financiero</h3><p>Este gerente, a menudo un contador, tiene la responsabilidad de supervisar todas las operaciones financieras de Ferrobolt. Administra los pagos a proveedores, maneja los ingresos y egresos, y asegura que se cumpla con el presupuesto de la empresa. Documentos clave en esta área incluyen el eCheq, que facilita los pagos electrónicos a los proveedores, y las Facturas, que deben ser verificadas antes de autorizar cualquier pago.</p>';
-            } else if (rol === 'ventasEmpresas') {
-                detalle.innerHTML = '<h3>Ventas Empresas</h3><p>Esta área está encargada del área de venta al público, ventas online y ventas empresa ya que gestiona las relaciones comerciales con las empresas que realizan compras al por mayor. El personal de esta área se enfoca en ofrecer condiciones personalizadas, descuentos por volumen y garantizar que las grandes cuentas reciban un servicio dedicado y eficiente. Además, aseguran que las empresas cuenten con la documentación adecuada, como facturas y remitos, para formalizar las transacciones y la entrega de productos.</p>';
-            } else if (rol === 'jefeLogistica') {
-                detalle.innerHTML = '<h3>Jefe de Logística</h3><p>El Jefe de Logística en Ferrobolt es responsable de coordinar y gestionar todas las actividades relacionadas con el almacenamiento, distribución y transporte de productos. Este puesto es crucial para asegurar que los productos lleguen a los clientes en tiempo y forma. Trabaja de la mano con el Gerente Comercial y el equipo de Expedición para organizar los despachos de productos como bulones, tornillos y herramientas, garantizando que los pedidos sean correctos y completos antes de su salida.</p>';
-            } else if (rol === 'adminVentas') {
-                detalle.innerHTML = '<h3>Admin. de Ventas</h3><p>El administrador de ventas en Ferrobolt es responsable de cargar las facturas en los portales de las empresas clientes. Esta tarea es vital para asegurar que los clientes reciban la documentación necesaria y que las transacciones estén correctamente registradas. Una vez que el pedido ha sido entregado, se emite una Factura, que detalla los productos, el costo total y las condiciones de pago. Esta factura es verificada contra la Orden de Compra y el Remito.</p>';
-            } else if (rol === 'pagoProveedores') {
-                detalle.innerHTML = '<h3>Pago a Proveedores</h3><p>El área de pagos a proveedores se encarga de gestionar los pagos por la mercadería que ingresa en la empresa. Esto incluye el uso de eCheq para realizar pagos de manera rápida y segura, asegurando que todos los proveedores reciban sus pagos a tiempo y que las cuentas estén en orden.</p>';
-            } else if (rol === 'maestranza') {
-                detalle.innerHTML = '<h3>Maestranza</h3><p>La maestranza tiene la responsabilidad de mantener la limpieza y el orden dentro de las instalaciones de Ferrobolt. Aunque no está directamente involucrada en las operaciones de producción, su trabajo es esencial para asegurar que los empleados trabajen en un ambiente seguro y limpio, lo que contribuye a la eficiencia y bienestar de la empresa.</p>';
-            } else if (rol === 'cobranza') {
-                detalle.innerHTML = '<h3>Cobranza</h3><p>El área de cobranza tiene la responsabilidad de gestionar el cobro de todas las facturas emitidas a los clientes. Esto incluye el seguimiento de los plazos de pago y la gestión de cuentas a cobrar, lo que es fundamental para mantener un flujo de caja saludable.</p>';
-            } else if (rol === 'expedicion') {
-                detalle.innerHTML = '<h3>Expedición</h3><p>El área de expedición es fundamental en Ferrobolt para el armado y despacho de pedidos. Aquí es donde se organizan los productos, se controlan y luego se despachan. Este departamento trabaja en colaboración con compras para asegurar que siempre haya stock suficiente. El Remito es un documento clave en este proceso, utilizado tanto al despachar los productos como al recibir la mercadería, garantizando que todo lo entregado y recibido coincida con lo solicitado. Además, el área de expedición depende de la Orden de Compra, la cual permite el reabastecimiento de productos necesarios para mantener el stock al día.</p>';
-            } else if (rol === 'choferes') {
-                detalle.innerHTML = '<h3>Choferes</h3><p> Los choferes en Ferrobolt tienen la responsabilidad de realizar las entregas a los clientes. Trabajan de la mano con el área de logística, lo que asegura que las entregas se realicen en tiempo y forma. Es esencial que los choferes entreguen los productos acompañados del Remito, y que este documento sea firmado por el cliente como comprobante de recepción, garantizando que el pedido ha llegado correctamente.</p>';
-            } else if (rol === 'actCostos') {
-                detalle.innerHTML = '<h3>Act. de Costos</h3><p>El área de actualización de costos se asegura de que los precios de todos los productos de Ferrobolt estén siempre actualizados en el sistema. Esta tarea es crítica, ya que los precios de materias primas, como el acero o el hierro, pueden fluctuar. Mantener los costos al día permite a la empresa ofrecer precios competitivos y ajustar sus márgenes de ganancia de manera eficiente.</p>';
-            } else if (rol === 'jefeMostrador') {
-                detalle.innerHTML = '<h3>Jefe de Mostrador</h3><p>Este jefe se encarga de supervisar las ventas que se realizan directamente al público en el mostrador de la empresa. Coordina el trabajo de los vendedores y asegura que los clientes reciban un servicio rápido y eficaz, manteniendo un control sobre los productos más vendidos y el stock necesario en la tienda. El jefe de mostrador también colabora con el área de expedición para organizar la entrega inmediata de los productos disponibles.</p>';
-            } else if (rol === 'ventasMostrador') {
-                detalle.innerHTML = '<h3>Ventas Mostrador</h3><p>Los vendedores que trabajan en el mostrador se encargan de atender a los clientes que realizan compras directamente en la tienda. En Ferrobolt, es importante que los vendedores tengan un conocimiento técnico adecuado sobre los productos para poder asesorar correctamente a los clientes, especialmente cuando se trata de especificaciones técnicas de bulones, tornillos u otros productos.</p>';
-            } else if (rol === 'deposito') {
-                detalle.innerHTML = '<h3>Deposito</h3><p>El depósito es el área encargada de la recepción, almacenamiento y gestión de los productos que ingresan y salen de la empresa. Aquí se realiza un control exhaustivo de la mercadería que llega de los proveedores, asegurando que se corresponde con lo que se solicitó en la Orden de Compra. Además, se utiliza el Remito para verificar y registrar la entrega correcta de los productos. Si Ferrobolt produce sus propios artículos, también gestiona las materias primas necesarias a través de la Orden de Fabricación, asegurando que todo esté en orden antes de iniciar la producción.</p>';
-            } else if (rol === 'recepProveedores') {
-                detalle.innerHTML = '<h3>Recep. de Proveedores</h3><p>El área de recepción de proveedores, que está dentro del depósito, tiene la tarea de revisar y aceptar los productos que llegan de los proveedores. Aquí se coteja la mercadería recibida con la Orden de Compra y se emite un informe que confirma que todo está en regla. Esto garantiza que la empresa solo pague por lo que realmente ha recibido.</p>';
-            } else if (rol === 'jefeAdministracion') {
-                detalle.innerHTML = '<h3>Jefe de Administración</h3><p>El jefe de administración supervisa las tareas administrativas y contables de la empresa. Es responsable de asegurar que las facturas y otros documentos financieros estén correctamente registrados y gestionados. Además, supervisa el procesamiento de pagos a proveedores y el control de las operaciones financieras diarias.</p>';
-            } else if (rol === 'caja') {
-                detalle.innerHTML = '<h3>Caja</h3><p>Esta área gestiona el efectivo generado por las ventas al público en el mostrador, asegurándose de que los cobros sean correctos y de que los registros estén actualizados en el sistema financiero de la empresa.</p>';
-            } else if (rol === 'facturacion') {
-                detalle.innerHTML = '<h3>Facturación</h3><p>Este departamento emite las facturas a todos los clientes de Ferrobolt una vez que se completan las ventas. Es clave para asegurar que las transacciones queden registradas correctamente y que la empresa reciba los pagos a tiempo.</p>';
-            } else if (rol === 'rrhh') {
-                detalle.innerHTML = '<h3>RRHH</h3><p>El departamento de RR.HH. gestiona todo lo relacionado con los empleados, desde las entrevistas de selección hasta el manejo de recibos de sueldo y la administración de beneficios. También se encarga de resolver cualquier problema interno que surja y de mantener un ambiente laboral adecuado.</p>';
-            } else if (rol === 'adminContable') {
-                detalle.innerHTML = '<h3>Admin. Contable</h3><p>Esta área se encarga de la carga de facturas tanto de proveedores como de gastos operativos. Además, gestiona las facturas de sueldos, impuestos, retenciones y todos los movimientos contables que afectan los ingresos y egresos de la empresa.</p>';
-            }
-        }
-    </script>
 </body>
 </html>
+
 
 
 
