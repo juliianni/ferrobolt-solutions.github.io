@@ -9,13 +9,15 @@ body {
     min-height: 100vh;
 }
 
+/* Header y Navegación */
 header {
     background-color: #333;
     padding: 10px;
     width: 100%;
+    margin-bottom: 20px; /* Añadido para reducir el espacio */
 }
 
-/* Menú de navegación */
+/* Estilos para la barra de navegación */
 .navbar ul {
     list-style-type: none;
     display: flex;
@@ -25,47 +27,57 @@ header {
     padding: 0;
 }
 
-.navbar ul li a {
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a,
+.navbar ul li .empresa-nombre {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 15px;
+    font-size: 1.3em; /* Aumentado de 1.2em */
+    padding: 12px 18px; /* Aumentado ligeramente el padding */
     transition: all 0.3s ease;
 }
 
+/* Estilos específicos para el nombre de la empresa */
+.navbar ul li .empresa-nombre {
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Mantener los estilos hover solo para los enlaces */
 .navbar ul li a:hover,
-.navbar ul li a.active { /* Añade esta clase al enlace de la página actual */
-    background-color: #222; /* Un tono más oscuro que el fondo de la barra de navegación */
-    color: white; /* Mantiene el texto en blanco */
+.navbar ul li a.active {
+    background-color: #222;
+    color: white;
 }
 
-.navbar ul li a {
-    border-radius: 4px;
+/* Asegurarse de que el nombre de la empresa no tenga efectos hover */
+.navbar ul li .empresa-nombre:hover {
+    background-color: transparent;
 }
 
-.navbar ul li a:hover, .empresa-nombre:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-.empresa-nombre {
-    font-size: 18px;
-}
-
-/* Contenido principal */
+/* Ajustar el margen superior del contenido principal */
 .contenido-principal {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 10px 20px; /* Reducido el padding superior */
     margin: 0;
     flex-grow: 1;
     flex-wrap: wrap;
 }
 
+/* Ajustar el margen del título principal */
 .contenido-principal h1 {
     width: 100%;
     text-align: center;
+    margin-top: 0; /* Eliminado el margen superior */
     margin-bottom: 20px;
 }
 
@@ -81,7 +93,6 @@ header {
     display: block;
 }
 
-/* Línea divisoria vertical */
 .linea-vertical {
     width: 2px;
     background-color: #333;
@@ -89,7 +100,6 @@ header {
     margin: 0 30px;
 }
 
-/* Contenido de la derecha */
 .contenido-derecha {
     width: 40%;
     padding-left: 20px;
@@ -124,6 +134,7 @@ header {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .botones .boton:hover {
@@ -137,7 +148,6 @@ footer {
     padding: 20px 0;
     width: 100%;
     margin-top: auto;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
