@@ -650,6 +650,26 @@ p {
     margin-bottom: 20px;
 }
 
+/* Estilos para los detalles del proceso */
+.detalle-proceso {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detalle-proceso h3 {
+    text-align: left;
+}
+
+.detalle-proceso p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
 .navbar ul {
     list-style-type: none;
     padding: 0;
@@ -708,7 +728,7 @@ p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
+    text-align: left; /* Cambiado de 'center' a 'left' */
 }
 
 /* Estilos para los íconos */
