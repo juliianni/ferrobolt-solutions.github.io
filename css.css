@@ -175,28 +175,48 @@ footer .social-icons a:hover img {
 
 .historia-contenido {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
 .texto-historia {
     flex: 2;
+    min-width: 300px;
 }
 
 .imagen-nosotros {
     flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    align-self: flex-start;
 }
 
 .imagen-nosotros img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .seccion-nosotros h1 {
     color: #333;
     border-bottom: 2px solid #333;
     padding-bottom: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.texto-historia {
+    flex: 2;
+    min-width: 300px;
+    text-align: left; /* Asegura que todo el texto dentro de .texto-historia esté alineado a la izquierda */
+}
+
+.texto-historia p {
+    margin-bottom: 1rem;
+    text-align: left; /* Refuerza la alineación a la izquierda para los párrafos */
 }
 
 /* Valores, Misión, Visión */
@@ -204,7 +224,7 @@ footer .social-icons a:hover img {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .valores, .mision, .vision {
@@ -214,15 +234,27 @@ footer .social-icons a:hover img {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left; /* Alinea todo el contenido a la izquierda por defecto */
+}
+
+.valores h2, .mision h2, .vision h2 {
+    text-align: center; /* Centra los títulos */
+    margin-bottom: 1rem;
 }
 
 .valores ul {
-    padding-left: 1.5rem;
+    padding-left: 1.5rem; /* Mantiene el padding izquierdo para la lista de valores */
+    margin-top: 0;
+    text-align: left; /* Asegura que la lista esté alineada a la izquierda */
+}
+
+.valores li, .mision p, .vision p {
+    text-align: left; /* Asegura que los elementos de la lista y los párrafos estén alineados a la izquierda */
 }
 
 /* Botón de descarga */
 .descargar-pdf {
-    margin-top: 2rem;
+    text-align: center;
 }
 
 .boton-descarga {
@@ -239,61 +271,22 @@ footer .social-icons a:hover img {
     background-color: #555;
 }
 
-/* Pie de página */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    width: 100%;
-    margin-top: auto;
-    text-align: center;
-}
-
-footer p {
-    margin-bottom: 20px;
-}
-
-footer .social-icons {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-footer .social-icons a {
-    display: inline-block;
-}
-
-footer .social-icons a img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-footer .social-icons a:hover img {
-    transform: scale(1.1);
-    opacity: 0.7;
-}
-
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .historia-contenido {
         flex-direction: column;
     }
 
     .imagen-nosotros {
         order: -1;
+        max-width: 100%;
+        margin: 0 auto;
     }
+}
 
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar li {
-        margin: 0.5rem 0;
+@media (max-width: 768px) {
+    .valores, .mision, .vision {
+        flex: 1 1 100%;
     }
 }
 
