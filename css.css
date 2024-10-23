@@ -184,6 +184,14 @@ footer .social-icons a:hover img {
 .texto-historia {
     flex: 2;
     min-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-historia p {
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 .imagen-nosotros {
@@ -208,17 +216,6 @@ footer .social-icons a:hover img {
     margin-bottom: 1rem;
 }
 
-.texto-historia {
-    flex: 2;
-    min-width: 300px;
-    text-align: left; /* Asegura que todo el texto dentro de .texto-historia esté alineado a la izquierda */
-}
-
-.texto-historia p {
-    margin-bottom: 1rem;
-    text-align: left; /* Refuerza la alineación a la izquierda para los párrafos */
-}
-
 /* Valores, Misión, Visión */
 .valores-mision-vision {
     display: flex;
@@ -234,27 +231,28 @@ footer .social-icons a:hover img {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: left; /* Alinea todo el contenido a la izquierda por defecto */
+    text-align: left;
 }
 
 .valores h2, .mision h2, .vision h2 {
-    text-align: center; /* Centra los títulos */
+    text-align: center;
     margin-bottom: 1rem;
 }
 
 .valores ul {
-    padding-left: 1.5rem; /* Mantiene el padding izquierdo para la lista de valores */
+    padding-left: 1.5rem;
     margin-top: 0;
-    text-align: left; /* Asegura que la lista esté alineada a la izquierda */
+    text-align: left;
 }
 
 .valores li, .mision p, .vision p {
-    text-align: left; /* Asegura que los elementos de la lista y los párrafos estén alineados a la izquierda */
+    text-align: left;
 }
 
 /* Botón de descarga */
 .descargar-pdf {
-    text-align: center;
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 .boton-descarga {
@@ -289,7 +287,6 @@ footer .social-icons a:hover img {
         flex: 1 1 100%;
     }
 }
-
 
 /* Estilos generales de la seccion "Servicios */
 body {
