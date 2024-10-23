@@ -25,11 +25,6 @@ header {
     padding: 0;
 }
 
-.navbar ul li {
-    margin: 0 10px;
-    position: relative;
-}
-
 .navbar ul li a {
     color: white;
     text-decoration: none;
@@ -39,7 +34,7 @@ header {
 }
 
 .navbar ul li a:hover,
-.navbar ul li a.active { 
+.navbar ul li a.active { /* Añade esta clase al enlace de la página actual */
     background-color: #222; /* Un tono más oscuro que el fondo de la barra de navegación */
     color: white; /* Mantiene el texto en blanco */
 }
