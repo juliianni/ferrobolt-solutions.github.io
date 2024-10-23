@@ -288,89 +288,129 @@ footer .social-icons a:hover img {
     }
 }
 
-/* Estilos generales de la seccion "Servicios */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
-    background-color: #333;
-    padding: 10px;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-.navbar li {
-    display: inline;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.navbar a:hover {
-    background-color: #555;
-}
-
-.empresa-nombre {
-    font-weight: bold;
-    color: white;
-}
-
 /* Sección Servicios */
 .seccion-servicios {
-    padding: 40px;
-    background-color: #f4f4f4;
-    max-width: 1200px;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.contenido-servicios h2 {
+.seccion-servicios h2 {
+    color: #2c3e50;
+    font-size: 2.4em; /* Aumentado de 2.2em */
+    margin-bottom: 30px; /* Aumentado de 25px */
     text-align: center;
+    font-weight: 700;
+    border-bottom: 2px solid #1A1A1A;
+    padding-bottom: 15px; /* Aumentado de 10px */
+    max-width: 80%; /* Para evitar que la línea sea demasiado larga en pantallas grandes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccion-servicios > p {
+    font-size: 1.15em; /* Ligeramente aumentado */
+    color: #34495e;
+    margin-bottom: 35px; /* Aumentado de 30px */
+    text-align: center;
+    line-height: 1.6;
+    max-width: 90%; /* Para mantener el texto más centrado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servicio-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 20px 25px;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #1A1A1A;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer; /* Añade un cursor de puntero para indicar interactividad */
 }
 
-.lista-servicios {
-    list-style-type: none;
-    padding: 0;
+.servicio-item:hover {transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: #f8f9fa; /* Cambia ligeramente el color de fondo al pasar el cursor */
 }
 
-.lista-servicios li {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.servicio-item h3 {
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    transition: color 0.3s ease; /* Añade una transición suave para el cambio de color */
 }
 
-.lista-servicios li:hover {
-    background-color: #ddd;
+.servicio-item:hover h3 {
+    color: #3498db; /* Cambia el color del título al pasar el cursor */
 }
 
-.lista-servicios h3 {
+.servicio-item p {
+    color: #7f8c8d;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left; /* Mantiene el texto alineado a la izquierda*/
+}
+
+.servicio-item p {
+    color: #7f8c8d;
+    font-size: 1em;
+    line-height: 1.6;
     margin: 0;
 }
 
-.lista-servicios p.descripcion {
-    margin-top: 10px;
-    display: none;
+@media (max-width: 650px) {
+    .seccion-servicios {
+        padding: 30px 15px;
+    }
+    
+    .servicio-item {
+        padding: 15px 20px;
+    }
 }
 
-.lista-servicios li:hover p.descripcion {
-    display: block;
+/* Estilos para la tabla de productos */
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-productos th, .tabla-productos td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-productos th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.tabla-productos tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.tabla-productos tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Alinear los precios a la derecha */
+.tabla-productos td:last-child {
+    text-align: right;
 }
 
 /* Footer */
@@ -395,227 +435,36 @@ footer li {
 footer a img {
     width: 30px;
     height: 30px;
+    transition: opacity 0.3s ease;
 }
 
-/* Estilos para la lista de productos */
-.lista-productos {
-    list-style-type: none;
-    padding: 0;
+footer a img:hover {
+    opacity: 0.7;
 }
 
-.lista-productos li {
-    background-color: #f5f5f5;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tabla-productos {
+        font-size: 14px;
+    }
+    
+    .tabla-productos th, .tabla-productos td {
+        padding: 8px;
+    }
+    
+    .servicio-item {
+        width: 90%;
+        padding: 15px;
+    }
 
-.lista-productos li strong {
-    font-weight: bold;
-}
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Estilos generales para las secciones de productos */
-#servicios, #productos {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-}
-
-/* Estilos para los botones interactivos de servicios */
-.lista-servicios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.servicio-item {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    width: 80%;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.servicio-item:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
-}
-
-.servicio-item h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.servicio-item p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Estilos para la lista de productos */
-.lista-productos {
-    list-style-type: none;
-    padding: 0;
-}
-
-.lista-productos li {
-    background-color: #f5f5f5;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.lista-productos li strong {
-    font-weight: bold;
-}
-
-/* Estilos generales para las secciones */
-#servicios, #productos {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-}
-
-.servicio {
-    position: relative;
-    margin: 20px 0;
-    padding: 15px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.servicio:hover {
-    background-color: #e0e0e0;
-}
-
-.descripcion {
-    display: none;
-    margin-top: 10px;
-}
-
-.servicio:hover .descripcion {
-    display: block;
-    color: #555;
-}
-
-/* Estilos para la tabla de productos */
-.tabla-productos {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.tabla-productos th, .tabla-productos td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.tabla-productos th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-align: center;
-    color: #333;
-}
-
-.tabla-productos tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.tabla-productos tr:hover {
-    background-color: #f1f1f1;
-}
-
-.tabla-productos td {
-    padding: 12px;
-    text-align: left;
-}
-
-.tabla-productos th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #CCCCCC;
-    color: white;
-}
-
-/* Alinear los precios a la derecha */
-.tabla-productos td:nth-child(3) {
-    text-align: right;
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2em;
-}
-
-p {
-    text-align: center;
-    margin: 10px 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-.navbar ul li {
-    margin: 0 20px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.navbar ul li a:hover {
-    text-decoration: underline;
+    .navbar ul li {
+        margin: 10px 0;
+    }
 }
 
 /* Sección de la parte contacto */
