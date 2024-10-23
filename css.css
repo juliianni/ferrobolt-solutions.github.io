@@ -30,11 +30,22 @@ header {
     position: relative;
 }
 
-.navbar ul li a, .empresa-nombre {
-    text-decoration: none;
+.navbar ul li a {
     color: white;
-    font-weight: bold;
-    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active { 
+    background-color: #222; /* Un tono más oscuro que el fondo de la barra de navegación */
+    color: white; /* Mantiene el texto en blanco */
+}
+
+.navbar ul li a {
+    border-radius: 4px;
 }
 
 .navbar ul li a:hover, .empresa-nombre:hover {
